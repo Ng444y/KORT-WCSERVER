@@ -1,10 +1,23 @@
-var express = require("express");
+var express = require('express');
 var app = express();
 
-app.get("/", function(request, response) {
-    response.send("Hello World!");
-});
+var bodyParser = require('body-parser');
 
-app.listen(3000, function(){
-    console.log('Server running at http://localhost:3000');
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
+
+app.get('/', function (req, res) {
+    res.sendFile( __dirname + "/" + "index.html" );
+})
+
+app.post('/process_post', urlencodedParser, function (req, res) {
+
+response = {
+    first_name:req.body.first_name,
+    last_name:req.body.last_name
+};
+    console.log(response);
+    res.end(JSON.stringify(response) );
+});
+app.listen(3000, () => {
+    console.log('Server is running on http://localhost:3000'); 
 });

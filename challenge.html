@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form</title>
+</head>
+<body>
+    <form action="http://127.0.0.1:3000/process_post" method="post">
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required> <br>
+
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" required> <br>
+
+        <label>Gender:</label>
+        <label><input type="radio" name="gender" value="male" required> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+        <label><input type="radio" name="gender" value="other"> Other. Please, Specify</label> <br>
+        <label><input type="radio" name="gender" value="other"> I'd rather not say.</label> <br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required> <br>
+
+        <label>Occupation:</label>
+        <label><input type="checkbox" name="Occupation" value="Bikes"> Bikes</label> <br>
+        <label><input type="checkbox" name="hobbies" value="Music"> Music</label> <br>
+        <label><input type="checkbox" name="hobbies" value="Sports"> Music</label> <br>
+        <label><input type="checkbox" name="hobbies" value="Poetry"> Music</label> <br>
+
+        <label>Hobbies:</label>
+        <label><input type="checkbox" name="hobbies" value="Bikes"> Bikes</label> <br>
+        <label><input type="checkbox" name="hobbies" value="Music"> Music</label> <br>
+        <label><input type="checkbox" name="hobbies" value="Sports"> Music</label> <br>
+        <label><input type="checkbox" name="hobbies" value="Poetry"> Music</label> <br>
+        <label><input type="checkbox" name="hobbies" value="Reading"> Music</label> <br>
+
+        
+
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
